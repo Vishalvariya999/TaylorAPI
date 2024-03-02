@@ -1,0 +1,6 @@
+@TaylorAPI_HostAddress = http://localhost:5085
+
+GET {{TaylorAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
