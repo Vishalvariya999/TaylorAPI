@@ -9,6 +9,8 @@ public partial class User
 {
     public int UserId { get; set; }
 
+    public int RoleId { get; set; }
+
     public string? FirstName { get; set; }
 
     public string? LastName { get; set; }
@@ -28,4 +30,6 @@ public partial class User
     public int UpdatedBy { get; set; }
 
     public bool Deleted { get; set; }
+
+    public virtual Role Role { get; set; } = null!;
 }

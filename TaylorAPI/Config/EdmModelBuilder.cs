@@ -1,4 +1,5 @@
-﻿using Microsoft.OData.Edm;
+﻿using Domain.Models;
+using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
 
 namespace TaylorAPI.Config
@@ -8,7 +9,7 @@ namespace TaylorAPI.Config
         public static IEdmModel GetEdmModel()
         {
             var builder = new ODataConventionModelBuilder();
-
+            builder.EntitySet<Role>(nameof(Role)).EntityType.HasKey(x => x.RoleId);
             return builder.GetEdmModel();
         }
     }
